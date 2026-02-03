@@ -207,49 +207,56 @@ body {
     }
 }
 
-/* Shooting Stars / Comets */
+/* Shooting Stars / Comets - Realistic High Speed */
 .comet {
     position: absolute;
-    width: 100px;
+    width: 150px;
     height: 1px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.4), transparent);
+    /* Gradient direction fixed: Transparent (Tail) -> White (Head) */
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), #fff);
     border-radius: 50%;
     opacity: 0;
-    animation: shoot var(--comet-duration, 3s) ease-in-out infinite;
+    animation: shoot var(--comet-duration, 4s) linear infinite;
     animation-delay: var(--comet-delay, 0s);
-    transform-origin: right center;
+    transform-origin: center;
+    /* Rotate to point down-right */
+    transform: rotate(315deg);
+    box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.1);
 }
 
 .comet::before {
     content: '';
     position: absolute;
-    left: 0;
-    top: -1px;
+    right: 0;
+    /* Head is now on the right */
+    top: 50%;
+    transform: translateY(-50%);
     width: 4px;
     height: 4px;
-    background: white;
+    background: #fff;
     border-radius: 50%;
-    box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.6), 0 0 20px 5px rgba(212, 175, 55, 0.3);
+    /* Bright glow at the head */
+    box-shadow: 0 0 15px 3px rgba(255, 255, 255, 0.8), 0 0 25px 5px rgba(212, 175, 55, 0.2);
 }
 
 @keyframes shoot {
     0% {
         opacity: 0;
-        transform: translateX(0) translateY(0) rotate(-35deg);
+        transform: translateX(-100px) translateY(-100px) rotate(45deg);
     }
 
     10% {
         opacity: 1;
     }
 
-    80% {
+    20% {
         opacity: 1;
     }
 
     100% {
         opacity: 0;
-        transform: translateX(500px) translateY(400px) rotate(-35deg);
-        /* Trayectoria más larga y directa */
+        /* Move across screen Down-Right */
+        transform: translateX(800px) translateY(800px) rotate(45deg);
     }
 }
 
