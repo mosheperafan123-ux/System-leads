@@ -703,9 +703,114 @@ p {
     }
 }
 
-@media (max-width: 480px) {
-    .benefits-grid {
-        grid-template-columns: 1fr;
+
+/* ============================================
+   Mobile Sizing Optimization (Max Width 768px)
+   ============================================ */
+@media (max-width: 768px) {
+    :root {
+        /* Reduce spacing variables for mobile */
+        --space-2xl: 60px;
+        --space-xl: 40px;
+        --space-lg: 30px;
+        --space-md: 20px;
+        --space-sm: 12px;
+    }
+
+    html {
+        font-size: 14px;
+        /* Reduce base font size */
+    }
+
+    /* Hero adjustments */
+    .hero {
+        min-height: auto;
+        padding: 100px 0 60px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+        /* Was likely larger */
+        line-height: 1.2;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    /* Grids 1 Column for Mobile */
+    .benefits-grid,
+    .results-grid,
+    .problems-grid,
+    .about-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Section Headers */
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-header p {
+        font-size: 1rem;
+    }
+
+    /* Comparative Demo Specifics */
+    .demo-container {
+        flex-direction: column;
+        padding: var(--space-sm);
+        gap: 30px;
+        /* Space for the VS badge */
+    }
+
+    .chat-area {
+        height: 300px;
+        /* Reduce height from 400px */
+    }
+
+    .vs-badge {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+        border-width: 3px;
+    }
+
+    .demo-header {
+        padding: 8px;
+    }
+
+    .demo-info h4 {
+        font-size: 0.9rem;
+    }
+
+    .demo-info span {
+        font-size: 0.7rem;
+    }
+
+    .demo-status {
+        font-size: 0.75rem;
+        padding: 8px;
+    }
+
+    /* Pricing Text in Demo Header */
+    .section-header .demo-price {
+        font-size: 1rem !important;
+        margin-top: 0.5rem !important;
+    }
+
+    /* Custom Software Section */
+    .custom-software-info {
+        padding: var(--space-lg) 0;
+    }
+
+    .custom-software-info h2 {
+        font-size: 1.6rem;
+    }
+
+    .custom-software-info p {
+        font-size: 1rem !important;
+        margin-bottom: 1rem !important;
     }
 }
 
@@ -1627,5 +1732,116 @@ p {
 
     .memory-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   Mobile Sizing Optimization (Max Width 768px)
+   ============================================ */
+@media (max-width: 768px) {
+    :root {
+        /* Reduce spacing variables for mobile */
+        --space-2xl: 60px;
+        --space-xl: 40px;
+        --space-lg: 30px;
+        --space-md: 20px;
+        --space-sm: 12px;
+    }
+
+    html {
+        font-size: 14px;
+        /* Reduce base font size */
+    }
+
+    /* Hero adjustments */
+    .hero {
+        min-height: auto;
+        padding: 100px 0 60px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+        /* Was likely larger */
+        line-height: 1.2;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    /* Grids 1 Column for Mobile */
+    .benefits-grid,
+    .results-grid,
+    .problems-grid,
+    .about-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Section Headers */
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-header p {
+        font-size: 1rem;
+    }
+
+    /* Comparative Demo Specifics */
+    .demo-container {
+        flex-direction: column;
+        padding: var(--space-sm);
+        gap: 30px;
+        /* Space for the VS badge */
+    }
+
+    .chat-area {
+        height: 300px;
+        /* Reduce height from 400px */
+    }
+
+    .vs-badge {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+        border-width: 3px;
+        /* Reset positioning from previous rule if needed, though the previous rule handles it well */
+    }
+
+    .demo-header {
+        padding: 8px;
+    }
+
+    .demo-info h4 {
+        font-size: 0.9rem;
+    }
+
+    .demo-info span {
+        font-size: 0.7rem;
+    }
+
+    .demo-status {
+        font-size: 0.75rem;
+        padding: 8px;
+    }
+
+    /* Pricing Text in Demo Header */
+    .section-header .demo-price {
+        font-size: 1rem !important;
+        margin-top: 0.5rem !important;
+    }
+
+    /* Custom Software Section */
+    .custom-software-info {
+        padding: var(--space-lg) 0;
+    }
+
+    .custom-software-info h2 {
+        font-size: 1.6rem;
+    }
+
+    .custom-software-info p {
+        font-size: 1rem !important;
+        margin-bottom: 1rem !important;
     }
 }
