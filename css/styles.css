@@ -618,6 +618,81 @@ p {
 }
 
 /* ============================================
+   About AR Technocode Section
+   ============================================ */
+.about-company {
+    padding: var(--space-2xl) 0;
+    background: var(--black);
+    position: relative;
+}
+
+.about-company::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+
+.about-item {
+    padding: var(--space-lg);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+}
+
+.about-item:hover {
+    border-color: rgba(212, 175, 55, 0.2);
+    background: rgba(212, 175, 55, 0.02);
+}
+
+.about-icon {
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+}
+
+.about-item h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+    color: var(--gold);
+}
+
+.about-item p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--white-soft);
+}
+
+.about-principles {
+    padding: var(--space-lg);
+    background: rgba(212, 175, 55, 0.03);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    border-radius: var(--radius-md);
+}
+
+.about-principles li {
+    color: var(--white-soft);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
    CTA Section
    ============================================ */
 .cta-section {
