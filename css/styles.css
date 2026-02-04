@@ -693,6 +693,30 @@ p {
 }
 
 /* ============================================
+   Custom Software Info Section
+   ============================================ */
+.custom-software-info {
+    padding: var(--space-xl) 0;
+    background: linear-gradient(180deg, var(--black) 0%, var(--blue-darker) 100%);
+    position: relative;
+}
+
+.custom-software-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.custom-software-info h2 {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+/* ============================================
    CTA Section
    ============================================ */
 .cta-section {
